@@ -22,7 +22,7 @@ steps:
     targetType: 'inline'
     script: |
       chmod -R 777 ./
-      docker run — rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-api-scan.py -t https://dzone.com/swagger/v1/swagger.json -f openapi -g api-scan.conf -x OWASP-ZAP-Report.xml -r api-scan-report.html
+      docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-api-scan.py -t https://dzone.com/swagger/v1/swagger.json -f openapi -g api-scan.conf -x OWASP-ZAP-Report.xml -r api-scan-report.html
       true
   displayName: Run security scan
 
