@@ -28,6 +28,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: 'scan-report.html'
+    targetPath: 'OWASP-ZAP-Report.xml'
     artifactType: 'pipeline'
     artifactName: 'scan-results'
